@@ -1,0 +1,11 @@
+.idea
+target
+local_db.bin
+*.iml
+
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
