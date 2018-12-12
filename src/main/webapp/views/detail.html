@@ -1,0 +1,28 @@
+
+<div class="container py-4">
+	<div class="card bg-light">
+		<div class="card-header">
+			Detail of book {{form.name}}
+			<a style="position:absolute;right:10px;" href="/#/">Back to list</a>			
+		</div>
+		<div class="card-body">
+			<div class="mb-3">
+				<label for="name">Name:</label>
+				<input id="name" ng-model="form.name" type="text" class="form-control" disabled="disabled">
+			</div>
+			<div class="mb-3">
+				<label for="author">Author:</label>
+				<input id="author" ng-model="form.author" type="text" class="form-control" disabled="disabled">
+			</div>
+			<div class="mb-3">
+				<label for="year">Year:</label> 
+				<input id="year" ng-model="form.year" type="number" class="form-control" disabled="disabled">
+			</div>
+			<div class="mb-3">
+				<label for="genre">Genre</label> <input
+					id="genre" ng-model="form.genre" type="text" class="form-control" disabled="disabled">
+			</div>			
+		</div>
+	</div>
+
+</div>

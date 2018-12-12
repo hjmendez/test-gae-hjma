@@ -1,0 +1,34 @@
+Useful information
+------------------
+
+1. Start application: mvn clean appengine:devserver
+
+2. Access application: http://localhost:8080
+
+3. Access swagger: http://localhost:8080/swagger/
+
+4. Access local console: http://localhost:8080/_ah/admin
+
+5. Access Google console: https://console.developers.google.com
+
+6. Deploy in Google: mvn clean appengine:update
+
+
+Documentation
+-------------
+
+Google App Engine Java: https://cloud.google.com/appengine/docs/java/
+
+Objectify: https://github.com/objectify/objectify
+
+AngularJS: https://angularjs.org/
+
+More documentation
+------------------
+
+- Persistence: https://github.com/objectify/objectify/wiki/Concepts
+- Search API: http://fts-webinar.appspot.com/#1, https://www.youtube.com/watch?v=cE6gb5pqr1k, http://www.chrisumbel.com/article/appengine_fulltext_nltk
+- Deploy: https://www.youtube.com/watch?v=hrShPd3Me5g
+
+- consistencia eventual: https://stackoverflow.com/questions/39357980/storing-and-loading-entities-with-objectify-returns-different-results
+

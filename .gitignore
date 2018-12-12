@@ -9,3 +9,5 @@ local_db.bin
 .project
 .settings/
 bin/
+
+indexes

@@ -1,0 +1,41 @@
+Siguiendo la estructura propuesta en el proyecto de ejemplo, y con la documentación existente acerca de Google App Engine, Objectify, AngularJS etc.
+implementar una aplicación para gestionar una librería.
+
+La aplicación dispondrá del modelo de datos necesario para almacenar libros, cada uno de los cuales tendrá:
+- ID (autogenerado en datastore)
+- Nombre
+- Autor
+- Año de publicación
+- Género
+
+Dispondrá de una pantalla inicial donde:
+- Se mostrarán los libros existentes, en forma de tabla, mostrando únicamente Nombre y Autor. Adicionalmente tendrá un input para búsquedas.
+- El listado se ordenará alfabéticamente por nombre del autor
+- Existirá un formulario para añadir un nuevo libro
+- Existirá una opción para eliminar un libro
+
+Existirá otra pantalla de detalle de un libro, que muestre toda su información.
+
+Tareas:
+------
+
+1. Definir el modelo de datos para persistir esta información en el datastore
+2. Definir la capa de acceso a datos que permita realizar las operaciones básicas, incluyendo la recuperación
+   del listado de libros de manera ordenada
+3. Definir los servicios REST necesarios
+4. Con la documentación de las APIs de Google App Engine, utilizar la que sea necesaria para implementar un servicio REST de búsqueda por texto.
+   Por ejemplo si existen los siguientes libros:
+   - Título: "Don Quijote de la Mancha", Autor: "Miguel de Cervantes"
+   - Título: "Novelas ejemplares", Autor: "Miguel de Cervantes"
+   El servicio de búsqueda deberá devolver los dos libros cuando se escriba "cervantes", y el segundo cuando se escriba "ejemp".
+   NOTA: Pensar la manera de conseguir este último resultado.
+5. Implementar pantalla de listado de libros, junto con las funciones adicionales detalladas, incluyendo el buscador con el servicio implementado en el punto anterior.
+6. Implementar pantalla de detalle de libro
+
+7. Para finalizar, desplegar la aplicación en Google, creando una nueva aplicación de Google App Engine (son gratuitas)
+
+Entregables:
+-----------
+1. Subir proyecto finalizado a un repositorio Git público (como Github), y compartirnos la URL del repositorio
+2. Los servicios REST deben estar correctamente documentados y deben poder ser utilizados desde Swagger (en local)
+3. Indicarnos el nombre de la aplicación Google App Engine donde se encuentra desplegada la aplicación

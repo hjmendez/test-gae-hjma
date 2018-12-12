@@ -1,0 +1,73 @@
+
+<div class="container py-4">
+	<h1>		
+		BooksApp
+		<img src="../resources/img/loading.gif" ng-show="loading==true"/>
+	</h1>
+	
+	<div class="row py-4">
+		<div class="col-md-8">
+			<div class="card bg-light">
+				<div class="card-header">
+					List of books
+				</div>
+				<div class="card-body">					
+					 <form class="form-inline my-2 my-lg-0">
+          				<input ng-model="txt" class="form-control mr-sm-2" type="text" placeholder="Name" aria-label="Search">
+          				<button ng-click="search()" class="btn btn-outline-primary my-2 my-sm-0" >Search</button>
+          				<button ng-click="reset()" class="btn btn-outline-primary my-2 mx-1" >Reset</button>
+        			</form>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<td>Name</td>
+								<td>Author</td>
+								<td>OPTIONS</td>
+							</tr>							
+						</thead>
+						<tbody>
+							<!-- con el filter order if order A  a b ... -->
+							<tr ng-repeat="item in list | orderBy:'author'">
+								<td>
+	    							<a href="/#/{{item.id}}">{{item.name}}</a>
+	    						</td>
+	    						<td>
+	    							{{item.author}}
+	    						</td>
+	    						<td>
+	    							<button class="btn btn-danger" ng-click="delete(item.id)">Delete</button>
+	    						</td>
+							</tr>							
+						</tbody>
+					</table>
+					
+				</div>
+			</div>				
+		</div>
+		<div class="col-md-4">
+			<div class="card bg-light">
+				<div class="card-header">New book</div>
+				<div class="card-body">
+					<div class="mb-3">
+              			<label for="name">Name<span class="text-muted">(*)</span></label>
+              			<input id="name" ng-model="form.name" type="text" class="form-control" placeholder="Name">	              				
+            		</div>
+            		<div class="mb-3">
+              			<label for="author">Author<span class="text-muted">(*)</span></label>
+              			<input id="author" ng-model="form.author" type="text" class="form-control" placeholder="Author">	              				
+            		</div>            	
+            		<div class="mb-3">
+              			<label for="year">Year<span class="text-muted">(*)</span></label>
+              			<input id="year" ng-model="form.year" type="number" class="form-control" placeholder="Year">	              				
+            		</div>
+            		<div class="mb-3">
+              			<label for="genre">Genre<span class="text-muted">(*)</span></label>
+              			<input id="genre" ng-model="form.genre" type="text" class="form-control" placeholder="Genre">	              				
+            		</div>      
+            		<button class="btn btn-outline-primary" ng-click="save()">Save</button>
+            		<button class="btn btn-outline-primary" ng-click="resetForm()">Reset</button>      																
+				</div>
+			</div>		
+		</div>
+	</div>
+</div>
